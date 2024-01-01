@@ -1,84 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese Visa Portal</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-        }
-
-        section {
-            padding: 2em;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        h1 {
-            color: #c72c41;
-        }
-
-        p {
-            color: #333;
-        }
-
-        .japanese-background {
-            background: url('japanese-background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px #333;
-        }
-
-        .visa-form {
-            background-color: #fff;
-            padding: 2em;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Add more styling as needed */
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
 <body>
-
-    <header>
-        <h1>Japanese Visa Portal</h1>
-    </header>
-
-    <section class="japanese-background">
-        <div class="visa-form">
-            <h2>Apply for a Visa</h2>
-            <p>Fill out the form below to start your visa application process.</p>
-            <!-- Add your visa form elements here -->
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Japanese Visa Portal. All rights reserved.</p>
-    </footer>
-
+	<div id='colors'>
+		<button id='black' onclick='changeColor("black")' ontouchstart='changeColor("black")'></button>
+		<button id='red' onclick='changeColor("red")' ontouchstart='changeColor("red")'></button>
+		<button id='green' onclick='changeColor("green")' ontouchstart='changeColor("green")'></button>
+		<button id='blue' onclick='changeColor("blue")' ontouchstart='changeColor("blue")'></button>
+		<button id='orange' onclick='changeColor("orange")' ontouchstart='changeColor("orange")'></button>
+		<button id='pink' onclick='changeColor("pink")' ontouchstart='changeColor("pink")'></button>
+	</div>
+	<canvas id='canvas' width='300' height='200'></canvas>
+	<div>
+		<button onclick='clearCanvas()'>Clear</button>
+	</div>
 </body>
 </html>
