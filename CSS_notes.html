@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         /* Element Selector is used for selecting an element for  applying  property and value */
-        div{
+        div {
             background-color: red;
         }
 
         /* Class Selector, it will select the  elements belonging to that class */
-        .red{
+        .red {
             background-color: red;
         }
 
         /* Id Selector, it will select the elements having id =  green */
-        #green{
+        #green {
             background-color: green;
         }
 
         /* Child Selectors, will select those p tags which are directly under the div tag not like div - article then p */
-        div > p {
+        div>p {
             color: blue;
             background-color: brown;
         }
@@ -34,12 +35,12 @@
 
         /* Universal Selector, "*" is used for selecting all the elements present in the html file */
         * {
-            margin:0;
+            margin: 0;
             padding: 0;
         }
 
         /* Pseudo Selector  */
-        a:visited{
+        a:visited {
             /* visited link ki properties */
             color: yellow
         }
@@ -49,25 +50,25 @@
             color: green;
         }
 
-        a:active{
+        a:active {
             /* properties at the moment we click on the element */
             background-color: red;
         }
 
-        a:hover{
+        a:hover {
             /* properties when we hover over the element */
             background-color: yellow;
         }
 
 
-        p:first-child{
+        p:first-child {
             /* it doesn't mean the first generation, it means first child of the same generation */
             background-color: aqua;
         }
 
 
 
-        *{     
+        * {
             margin: 0;
             padding: 0;
             /* by default the browser adds some margin padding */
@@ -77,10 +78,11 @@
             background-color: aqua;
             /* for selecting both elements */
         }
-        .box1{
+
+        .box1 {
             color: yellow;
             padding: 10px;
-            margin:35px;
+            margin: 35px;
             border: 2px solid blue;
             height: 200px;
             box-sizing: border-box;
@@ -88,12 +90,12 @@
         }
 
         /* ALSO NOTE that when we give some x margin two both box 1 and 2 then space between two boxes should be 2x but it's x as it occurs due to margin collapse */
-        .box2{
-            color:red;
+        .box2 {
+            color: red;
             /* color of  the content ie text */
             padding: 10px;
             /* padding sabse inner to the content basically content ko padding dete hain... and then comes the boundary when we go outside, boundary can have a color, at most outside is the margin */
-            margin:25px;
+            margin: 25px;
             border: 2px solid black;
 
 
@@ -114,7 +116,7 @@
             /* color: rgba(255, 22, 5, 0.175) */
             color: hsl(130, 61%, 44%);
             background-color: rgb(76, 125, 59);
-        }  
+        }
 
 
 
@@ -123,30 +125,34 @@
 
         /* import krlo url of the font in style tag ke andr */
         @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+
         h1 {
             font-family: 'Poppins', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-            /* if user has first font installed then it will be shown else second  else  third so on */
+                /* if user has first font installed then it will be shown else second  else  third so on */
         }
 
         p {
             /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
             font-family: 'Baloo Bhai 2', sans-serif;
-            font-size: 20px; 
-             font-style:italic;
+            font-size: 20px;
+            font-style: italic;
             font-weight: 500;
             /* font weight can be used to make font bold */
-            
+
         }
-        h2{
+
+        h2 {
             text-align: center;
             text-transform: uppercase;
             text-decoration: underline;
             text-decoration-color: blue;
-             text-decoration-style: dotted; 
-            text-decoration-thickness: 7px ;
-             text-indent: 45px; /* gives indent */
+            text-decoration-style: dotted;
+            text-decoration-thickness: 7px;
+            text-indent: 45px;
+            /* gives indent */
         }
-        .lorem{
+
+        .lorem {
             border: 2px solid red;
             width: 145px;
             word-break: break-all;
@@ -154,6 +160,7 @@
             overflow: hidden;
 
         }
+
         /* Universal Selector: 0
         Element selectors and pseudo-elements: 1
         Class selectors, attribute selectors, and pseudo-classes: 10
@@ -161,44 +168,46 @@
         Inline styles: 1000 
         if same type of selector then last wla apply hoga, */
 
-      /* The specificity of this selector is 1  */
-      h1 {
-        color: aqua;
-      }
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: aqua;
+        }
 
-      /* The specificity of this selector is 10  */
-      .cpurple {
-        color: purple;
-      }
+        /* The specificity of this selector is 10  */
+        .cpurple {
+            color: purple;
+        }
 
-      /* The specificity of this selector is 1 + 10 = 11  */
-      h1.yellow {
-        color: yellow;
-      }
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow;
+        }
 
-      /* This is an example of attribute selector. The specificity of this selector is 10 */
-      [data-x="a"] {
-        color: maroon;
-      }
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x="a"] {
+            color: maroon;
+        }
 
-      /* The specificity of this selector is 10  */
-      .cred {
-        color: red;
-      }
+        /* The specificity of this selector is 10  */
+        .cred {
+            color: red;
+        }
 
-      /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
-      a.harryclass.rohan-class[href]:hover {
-        color: blueviolet;
-      }
+        /* The specificity of this selector is 1 + 10 + 10 + 10 + 10 = 41  */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
 
-      p {
-        color: red !important;
-      }
-          /* by writing important, it adds 10,000 points to that property, so it becomes highly specific */ 
-      p {
-        color: blue;
-      }
-      .box {
+        p {
+            color: red !important;
+        }
+
+        /* by writing important, it adds 10,000 points to that property, so it becomes highly specific */
+        p {
+            color: blue;
+        }
+
+        .box {
             box-sizing: border-box;
             border: 2px solid black;
             width: 2048px;
@@ -214,23 +223,23 @@
             also em is used for inherited size then 2em etc can be used
             also rem is used for  root browser font size, then 1.5rem etc can be used */
         }
-
-
     </style>
 </head>
+
 <body>
     <div class="box box1">I am a box</div>
-    <div class="box box2">I am another box</div> 
+    <div class="box box2">I am another box</div>
     <!-- an element can have more than 1 classes but can have only 1 id -->
     <p>
         Color can be represented in:
-        <ol>
-            <li>Color Keywords</li>
-            <li>Hex Color Code</li>
-            <li>RGB</li>
-            <li>RGBA</li>
-            <li>HSL</li>
-        </ol>
+    <ol>
+        <li>Color Keywords</li>
+        <li>Hex Color Code</li>
+        <li>RGB</li>
+        <li>RGBA</li>
+        <li>HSL</li>
+    </ol>
     </p>
 </body>
+
 </html>
