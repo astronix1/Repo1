@@ -198,6 +198,23 @@
       p {
         color: blue;
       }
+      .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 2048px;
+            /* just pixels */
+            width: 80vw;
+            /* 80% of width of screen */
+            height: 10vh;
+            /* 10% of height of screen */
+            margin: auto;
+            /* used to center an element horizontally within its parent container */
+            background-color: aquamarine;
+            /* vmin and vmax is used to address the min or max in phones and pc like phone mein width will serve as vmin then we can write as 1.5vmin etc
+            also em is used for inherited size then 2em etc can be used
+            also rem is used for  root browser font size, then 1.5rem etc can be used */
+        }
+
 
     </style>
 </head>
