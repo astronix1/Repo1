@@ -1,24 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Paint_App</title>
-	<link rel="stylesheet" href="style1.css">
-	<script src = "script1.js"> </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4caf50;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-	<div id='colors'>
-		<button id='black' onclick='changeColor("black")' ontouchstart='changeColor("black")'></button>
-		<button id='red' onclick='changeColor("red")' ontouchstart='changeColor("red")'></button>
-		<button id='green' onclick='changeColor("green")' ontouchstart='changeColor("green")'></button>
-		<button id='blue' onclick='changeColor("blue")' ontouchstart='changeColor("blue")'></button>
-		<button id='orange' onclick='changeColor("orange")' ontouchstart='changeColor("orange")'></button>
-		<button id='pink' onclick='changeColor("pink")' ontouchstart='changeColor("pink")'></button>
-	</div>
-	<canvas id='canvas' width='300' height='200'></canvas>
-	<div>
-		<button onclick='clearCanvas()'>Clear</button>
-	</div>
+
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+
+        <!-- Dropdown for Engineering Branch -->
+        <label for="branch">Select Your Engineering Branch:</label>
+        <select id="branch">
+            <option value="cse">Computer Science</option>
+            <option value="ece">Electronics and Communication</option>
+            <!-- Add other engineering branches as needed -->
+        </select>
+
+        <!-- Input for First Semester CGPA -->
+        <label for="firstSemesterCGPA">Enter Your First Semester CGPA:</label>
+        <input type="number" id="firstSemesterCGPA" step="0.01" required>
+
+        <!-- Input for Final Semester CGPA -->
+        <label for="finalSemesterCGPA">Enter Your Target Final Semester CGPA:</label>
+        <input type="number" id="finalSemesterCGPA" step="0.01" required>
+
+        <!-- Button to Trigger Calculation -->
+        <button onclick="calculateCGPA()">Calculate</button>
+
+        <!-- Display Result -->
+        <p id="result"></p>
+    </div>
+
+    <div class="footer">
+        Made with ❤ by Vishal
+    </div>
+
+    <script>
+        function calculateCGPA() {
+            // Get values from user inputs
+            var branch = document.getElementById("branch").value;
+            var firstSemesterCGPA = parseFloat(document.getElementById("firstSemesterCGPA").value);
+            var finalSemesterCGPA = parseFloat(document.getElementById("finalSemesterCGPA").value);
+
+            // Add your logic to calculate the average CGPA required
+            var avgCGPARequired = (finalSemesterCGPA + firstSemesterCGPA) / 2;
+
+            // Display the result
+            document.getElementById("result").innerHTML = "To achieve a final CGPA of " + finalSemesterCGPA + " in " + branch + ", you need an average CGPA of " + avgCGPARequired.toFixed(2);
+        }
+    </script>
 </body>
 </html>
